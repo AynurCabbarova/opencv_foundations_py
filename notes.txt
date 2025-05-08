@@ -1,0 +1,18 @@
+key teyin edreken onu evvelde yox whiel icinde et
+while True:
+        key = cv2.waitKey(100) & 0xFF
+        if key == 27 or key == ord('q'):
+            print('Exiting...')
+            break
+
+bele olmasa print() mesaji ekranda gorunmur ama cv2 ekrani baglanir
+____________________________________________________________________
+Gausssian blur da kernel olaraq ancaq tek ededler olaacq, (7, 7) , (3, 3)
+(3, 7) de olar ama bele e\olanda saquli ve ufuqi istiqametde olan bulaniqliq derecesi eyni olmayacaq
+_____________________________________________________________________
+fiqur cekende cv2 ile eger daire ve ya duzbucaqli ici de dolu olsun isteyirikse -1 yazariq ama duzgun gorunmur  thickness=cv2.FILLED daha cleandir
+_____________________________________________________________________
+cv2.drawContours(image_, contours, -1, 1) 
+isleyir amma karikatura effekti yaradir
+_____________________________________________________________________
+sekili opencv BGR Mathplotlib ise RGB oxuyur, Mathplotlible sekli pozmadan oxumaq ucun evvelce RGB ye cevirmeliyik
